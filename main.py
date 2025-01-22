@@ -34,12 +34,12 @@ dists = collection.query(
     include=['distances']
 )
 
-# flatten the distance list, excluding the first element (which is an element distance to itself)
-#flat_dists = [item for sublist in dists['distances'] for item in sublist[1:]]
+#flatten the distance list, excluding the first element (which is an element distance to itself)
+flat_dists = [item for sublist in dists['distances'] for item in sublist[1:]]
 
-# mapper = UMAP().fit(support_embeddings)
-# umap_plot.points(mapper, values=np.array(flat_dists), show_legend=False, theme='inferno')
+mapper = UMAP().fit(support_embeddings)
+umap_plot.points(mapper, values=np.array(flat_dists), show_legend=False, theme='inferno')
 
-# hist, bin_edges = np.histogram(flat_dists, bins=100, density=True)
-# cumulative_density = np.cumsum(hist) / np.sum(hist)
+hist, bin_edges = np.histogram(flat_dists, bins=100, density=True)
+cumulative_density = np.cumsum(hist) / np.sum(hist)
 

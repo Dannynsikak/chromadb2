@@ -7,7 +7,6 @@ from umap.umap_ import UMAP
 import umap.plot as umap_plot
 import numpy as np
 
-
 dataset = load_dataset("sciq", split="train")
 
 # filter the dataset to only include questions with a support 

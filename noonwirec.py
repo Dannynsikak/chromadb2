@@ -37,5 +37,5 @@ query_result = collection.query(
         n_results=2,
     )
 
-print(query_result)
-# print(collection.peek())
+# print(query_result)
+print(collection.peek())
